@@ -10,9 +10,11 @@ import SwiftData
 
 @main
 struct KikitxtApp: App {
+    @State private var appModel = AppModel()
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            VoiceProfile.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +27,8 @@ struct KikitxtApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environment(appModel)
         }
         .modelContainer(sharedModelContainer)
     }

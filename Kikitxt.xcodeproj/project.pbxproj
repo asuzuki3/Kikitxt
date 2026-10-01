@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		878FB2F0306DCBCD0065B05E /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 878FB2F1306DCBCD0065B05E /* FluidAudio */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		878FB2CC306DCBCD0065B05E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878FB2F0306DCBCD0065B05E /* FluidAudio in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = Kikitxt;
 			packageProductDependencies = (
+				878FB2F1306DCBCD0065B05E /* FluidAudio */,
 			);
 			productName = Kikitxt;
 			productReference = 878FB2BC306DCBCC0065B05E /* Kikitxt.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 878FB2B3306DCBCC0065B05E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				878FB2F2306DCBCD0065B05E /* XCRemoteSwiftPackageReference "FluidAudio" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 878FB2BD306DCBCC0065B05E /* Products */;
 			projectDirPath = "";
@@ -400,6 +409,8 @@
 				DEVELOPMENT_TEAM = PDS92PG8C6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "会話を文字起こしするためにマイクを使います。音声は端末の外に送信しません。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音した音声を端末内で日本語の文字に変換するために音声認識を使います。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +443,8 @@
 				DEVELOPMENT_TEAM = PDS92PG8C6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "会話を文字起こしするためにマイクを使います。音声は端末の外に送信しません。";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "録音した音声を端末内で日本語の文字に変換するために音声認識を使います。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		878FB2F2306DCBCD0065B05E /* XCRemoteSwiftPackageReference "FluidAudio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FluidInference/FluidAudio.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.17.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		878FB2F1306DCBCD0065B05E /* FluidAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 878FB2F2306DCBCD0065B05E /* XCRemoteSwiftPackageReference "FluidAudio" */;
+			productName = FluidAudio;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 878FB2B4306DCBCC0065B05E /* Project object */;
 }
